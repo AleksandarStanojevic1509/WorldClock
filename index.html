@@ -1,32 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Analog Clock</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat+Alternates&display=swap" rel="stylesheet">
-</head>
-<body>
-    <div id="clock">
-        <div class="hand" id="hour-hand"></div>
-        <div class="hand" id="minut-hand"></div>
-        <div class="hand" id="seconf-hand"></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>World Clock</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat+Alternates&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.13/moment-timezone-with-data.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>World Clock</h1>
+      </header>
+      <main>
+        <div id="left-row">
+          <div id="london" class="cities-left"></div>
+          <div id="new-york" class="cities-left"></div>
+          <div id="singapore" class="cities-left"></div>
+          <div id="cape-town" class="cities-left"></div>
+          <div id="sydney" class="cities-left"></div>
+        </div>
+        <div id="centar">
+          <h2 id="lt-header">Local Time:</h2>
+          <div id="clock">
+            <div id="hands-center"></div>
+            <div class="hand" id="hour-hand"></div>
+            <div class="hand" id="minut-hand"></div>
+            <div class="hand" id="second-hand"></div>
 
-        <div class="number" id="">12</div>
-        <div class="number" id="n1">1</div>
-        <div class="number" id="n2">2</div>
-        <div class="number" id="n3">3</div>
-        <div class="number" id="n4">4</div>
-        <div class="number" id="n5">5</div>
-        <div class="number" id="n6">6</div>
-        <div class="number" id="n7">7</div>
-        <div class="number" id="n8">8</div>
-        <div class="number" id="n9">9</div>
-        <div class="number" id="n10">10</div>
-        <div class="number" id="n11">11</div>
-
-
+            <div class="number" id="">12</div>
+            <div class="number" id="n1">1</div>
+            <div class="number" id="n2">2</div>
+            <div class="number" id="n3">3</div>
+            <div class="number" id="n4">4</div>
+            <div class="number" id="n5">5</div>
+            <div class="number" id="n6">6</div>
+            <div class="number" id="n7">7</div>
+            <div class="number" id="n8">8</div>
+            <div class="number" id="n9">9</div>
+            <div class="number" id="n10">10</div>
+            <div class="number" id="n11">11</div>
+          </div>
+        </div>
+        <div id="right-row">
+          <div id="moscow" class="cities-right"></div>
+          <div id="tokyo" class="cities-right"></div>
+          <div id="beijing" class="cities-right"></div>
+          <div id="vancouver" class="cities-right"></div>
+          <div id="rio-de-janeiro" class="cities-right"></div>
+        </div>
+      </main>
     </div>
-</body>
+    <script src="app.js"></script>
+  </body>
 </html>
